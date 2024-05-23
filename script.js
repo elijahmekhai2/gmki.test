@@ -6,10 +6,12 @@ function updateTime() {
     m = checkTime(m);
     s = checkTime(s);
     document.getElementById('timeDisplay').innerHTML = h + ":" + m + ":" + s;
-        setTimeout(startTime, 1000);
+        setTimeout(updateTime, 1000);
 }
 
 function checkTime(i) {
     if (i < 10) {i = "0" +i};
     return i;
 }
+
+updateTime ();
